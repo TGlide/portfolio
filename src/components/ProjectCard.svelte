@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.project-card {
 		display: flex;
 		flex-direction: column;
@@ -55,19 +55,18 @@
 
 		padding: 1rem;
 		width: 20rem; /* 320px */
-	}
 
-	.project-card.reverse {
-		flex-direction: column-reverse;
-	}
+		&.reverse {
+			flex-direction: column-reverse;
 
-	.project-card > * + * {
-		margin-top: 1rem;
-	}
+			> * + * {
+				margin-bottom: 1rem;
+			}
+		}
 
-	.project-card.reverse > * + * {
-		margin-top: 0;
-		margin-bottom: 1rem;
+		&:not(.reverse) > * + * {
+			margin-top: 1rem;
+		}
 	}
 
 	.thumbnail {
@@ -83,22 +82,22 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-	}
 
-	.header > * + * {
-		margin-left: 1rem;
-	}
+		> * + * {
+			margin-left: 1rem;
+		}
 
-	.header > img {
-		border-radius: var(--radii-8);
-		width: 2.375rem; /* 48px */
-		height: 2.375rem;
-	}
+		> img {
+			border-radius: var(--radii-8);
+			width: 2.375rem; /* 48px */
+			height: 2.375rem;
+		}
 
-	.header > p {
-		font-family: var(--ff-display);
-		font-size: 1.5rem;
-		font-weight: 500;
+		> p {
+			font-family: var(--ff-display);
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
 	}
 
 	.description {
@@ -111,24 +110,24 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-	}
 
-	.links > * + * {
-		margin-left: 0.5rem;
-	}
+		> * + * {
+			margin-left: 0.5rem;
+		}
 
-	.links > * {
-		opacity: 0.25;
-	}
+		> * {
+			opacity: 0.25;
+		}
 
-	.links > a {
-		font-family: var(--ff-display);
-		font-size: 0.75rem;
-		font-weight: 500;
-		transition: opacity 200ms ease;
-	}
+		> a {
+			font-family: var(--ff-display);
+			font-size: 0.75rem;
+			font-weight: 500;
+			transition: opacity 200ms ease;
+		}
 
-	.links > a:hover {
-		opacity: 1;
+		> a:hover {
+			opacity: 1;
+		}
 	}
 </style>
