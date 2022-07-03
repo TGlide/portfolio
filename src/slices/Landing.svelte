@@ -24,11 +24,11 @@
 				My name is <span class="name-wrapper">
 					<span class="text-left">Developer</span>
 					<span class="line-left">
-						<DecorativeLine variant="left" />
+						<DecorativeLine variant="left" delay="3500ms" />
 					</span>
 					<span class="text-right">Designer</span>
 					<span class="line-right">
-						<DecorativeLine variant="right" delay="1500ms" />
+						<DecorativeLine variant="right" delay="3500ms" />
 					</span>
 					<span class="name">Thomas</span>.
 				</span>
@@ -55,6 +55,48 @@
 		}
 	}
 
+	@keyframes expand {
+		0% {
+			margin-left: 0rem;
+			padding-right: 0rem;
+			max-width: 0;
+		}
+		100% {
+			margin-left: 4rem;
+			padding-right: 1rem;
+			max-width: 520px;
+		}
+	}
+
+	@keyframes fade-top-to-bottom {
+		0% {
+			opacity: 0;
+			transform: translateY(-1rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes scale {
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
 	#hero {
 		display: grid;
 		place-items: center;
@@ -72,6 +114,7 @@
 			background: var(--fiery-rose);
 			opacity: 0.25;
 			border-radius: 50%;
+			animation: scale 750ms 3000ms ease both;
 		}
 
 		.content {
@@ -82,11 +125,16 @@
 			img {
 				width: 320px;
 				height: 320px;
+
+				animation: fade-top-to-bottom 500ms 500ms ease both;
 			}
 
 			.text {
-				margin-left: 4rem;
 				font-family: var(--ff-display);
+				overflow: hidden;
+				white-space: nowrap;
+
+				animation: expand 1750ms 1500ms ease both;
 
 				p:nth-child(1) {
 					font-size: 6rem;
@@ -121,7 +169,7 @@
 						top: -0.5rem;
 						left: -0.5rem;
 						--base-transform: translateY(-100%) rotate(-15deg);
-						animation: pop-in 500ms 1000ms ease-in-out both;
+						animation: pop-in 500ms 4000ms ease-in-out both;
 					}
 
 					.line-right {
@@ -135,7 +183,7 @@
 						top: -0.6rem;
 						right: -1rem;
 						--base-transform: translateY(-100%) rotate(15deg);
-						animation: pop-in 500ms 2000ms ease-in-out both;
+						animation: pop-in 500ms 4000ms ease-in-out both;
 					}
 
 					.name {
@@ -156,6 +204,7 @@
 			transform: translateX(-50%);
 
 			padding-bottom: 1rem;
+			animation: fade-in 1000ms ease 3000ms both;
 
 			#circle-type {
 				font-family: var(--ff-display);
