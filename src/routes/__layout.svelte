@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../styles/index.css';
+	import '$styles';
 </script>
 
 <main>

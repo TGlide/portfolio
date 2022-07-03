@@ -20,6 +20,7 @@
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-svelte-csf": "^2.0.4",
     "@storybook/addons": "^6.5.9",
     "@storybook/builder-webpack4": "^6.5.9",
     "@storybook/manager-webpack4": "^6.5.9",
@@ -47,6 +48,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource/lato": "^4.5.8",
-    "@fontsource/poppins": "^4.5.8"
+    "@fontsource/poppins": "^4.5.8",
+    "class-variance-authority": "^0.2.2"
   }
 }

@@ -1604,6 +1604,13 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
+"@storybook/addon-svelte-csf@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-svelte-csf/-/addon-svelte-csf-2.0.4.tgz#e4b127203424e3d5bf710b128d8c8f34269a9354"
+  integrity sha512-W6+v5cHsbfG2pHdndB3YEReq+BSmQr+QUjEv6J1/Z5OwcRoE7TgeOI4J0qTW12xfO3E/NNu0AFr3nCS2G3fw2Q==
+  dependencies:
+    ts-dedent "^2.0.0"
+
 "@storybook/addon-toolbars@6.5.9":
   version "6.5.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.5.9.tgz#feedfdac08482d43bb1f3cc00840d80322c5eace"
@@ -3950,6 +3957,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+class-variance-authority@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/class-variance-authority/-/class-variance-authority-0.2.2.tgz#55ea3af16ab95803ce6ef6426715930c8148532c"
+  integrity sha512-SPMcf+Jd/QYTfq+cO5/6sS6q9N+DZNeKOSscWOQgE0i6wl0IN6PcRCakyve/08ARrc/Pj5XOluonDFIFA4ASnQ==
 
 clean-css@^4.2.3:
   version "4.2.4"
