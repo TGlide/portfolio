@@ -6,6 +6,7 @@
     'Open Sans', 'Helvetica Neue', sans-serif;
   --ff-display: "Poppins", var(--ff-fallback);
   --ff-body: "Lato", var(--ff-fallback);
+  --ff-decorative: 'Caveat', var(--ff-fallback);
 
 
   /* ------ */

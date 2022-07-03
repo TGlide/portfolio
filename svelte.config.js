@@ -19,7 +19,9 @@ const config = {
 		alias: {
 			$UI: 'src/UI',
 			$styles: 'src/styles',
-			$components: 'src/components'
+			$components: 'src/components',
+			$slices: 'src/slices',
+			$utils: 'src/utils'
 		}
 	}
 };
