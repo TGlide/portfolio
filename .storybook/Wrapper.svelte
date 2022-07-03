@@ -14,6 +14,7 @@
 	div {
 		background-color: var(--night-black);
 		margin: -16px;
+		padding: 1rem;
 		height: 100%;
 	}
 </style>

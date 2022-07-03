@@ -13,9 +13,10 @@
   /* ------ */
 
   /* Radius */
-  --radii-sm: 0.25rem;
-  --radii-md: 0.5rem;
-  --radii-lg: 1rem;
+  --radii-4: 0.25rem;
+  --radii-8: 0.5rem;
+  --radii-12: 0.75rem;
+  --radii-16: 1rem;
   --radii-full: 9999px;
 
   /* ------ */
