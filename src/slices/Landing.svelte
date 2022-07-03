@@ -1,8 +1,8 @@
 <script>
 	import { browser } from '$app/env';
 	import Eyes from '$components/Eyes';
+	import DecorativeText from '$UI/DecorativeText.svelte';
 
-	import DecorativeLine from '$UI/DecorativeLine.svelte';
 	import { onBrowserMount } from '$utils/svelte';
 	// @ts-ignore
 	import CircleType from 'circletype';
@@ -20,19 +20,7 @@
 		<img src="avatar.png" alt="Thomas Gouveia Lopes smiling" />
 		<div class="text">
 			<p>Hi!</p>
-			<p>
-				My name is <span class="name-wrapper">
-					<span class="text-left">Developer</span>
-					<span class="line-left">
-						<DecorativeLine variant="left" delay="3000ms" />
-					</span>
-					<span class="text-right">Designer</span>
-					<span class="line-right">
-						<DecorativeLine variant="right" delay="3000ms" />
-					</span>
-					<span class="name">Thomas</span>.
-				</span>
-			</p>
+			<p>My name is <DecorativeText>Thomas</DecorativeText>.</p>
 		</div>
 	</div>
 	<div class="bottom">
@@ -44,17 +32,6 @@
 </section>
 
 <style lang="scss">
-	@keyframes pop-in {
-		0% {
-			opacity: 0;
-			transform: var(--base-transform) scale(0);
-		}
-		100% {
-			opacity: 1;
-			transform: var(--base-transform) scale(1);
-		}
-	}
-
 	@keyframes expand {
 		0% {
 			margin-left: 0rem;
@@ -116,106 +93,63 @@
 			border-radius: 50%;
 			animation: scale 750ms 4500ms ease both;
 		}
+	}
 
-		.content {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-			img {
-				width: 320px;
-				height: 320px;
+		img {
+			width: 320px;
+			height: 320px;
 
-				animation: fade-top-to-bottom 500ms 500ms ease both;
-			}
-
-			.text {
-				font-family: var(--ff-display);
-				overflow: hidden;
-				white-space: nowrap;
-
-				animation: expand 1750ms 1500ms ease both;
-
-				p:nth-child(1) {
-					font-size: 6rem;
-					font-weight: 700;
-					line-height: 9rem;
-				}
-
-				p:nth-child(2) {
-					font-size: 3rem;
-					font-weight: 600;
-					line-height: 4.5rem;
-				}
-
-				.name-wrapper {
-					position: relative;
-
-					span:not(.name) {
-						font-family: var(--ff-decorative);
-						font-size: 1.5rem;
-						color: var(--fiery-rose);
-					}
-
-					.line-left {
-						position: absolute;
-						top: -2.5rem;
-						left: 2.5rem;
-						transform: rotate(-10deg);
-					}
-
-					.text-left {
-						position: absolute;
-						top: -0.5rem;
-						left: -0.5rem;
-						--base-transform: translateY(-100%) rotate(-15deg);
-						animation: pop-in 500ms 3500ms ease-in-out both;
-					}
-
-					.line-right {
-						position: absolute;
-						top: -2.5rem;
-						right: 2rem;
-					}
-
-					.text-right {
-						position: absolute;
-						top: -0.6rem;
-						right: -1rem;
-						--base-transform: translateY(-100%) rotate(15deg);
-						animation: pop-in 500ms 3500ms ease-in-out both;
-					}
-
-					.name {
-						border-bottom: 3px var(--megaman-blue) solid;
-					}
-				}
-			}
+			animation: fade-top-to-bottom 500ms 500ms ease both;
 		}
 
-		.bottom {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+		.text {
+			font-family: var(--ff-display);
+			overflow: hidden;
+			white-space: nowrap;
 
-			position: absolute;
-			left: 50%;
-			bottom: 0rem;
-			transform: translateX(-50%);
+			animation: expand 1750ms 1500ms ease both;
 
-			padding-bottom: 1rem;
-			animation: fade-in 1000ms ease 4500ms both;
+			p:nth-child(1) {
+				font-size: 6rem;
+				font-weight: 700;
+				line-height: 9rem;
+			}
 
-			#circle-type {
-				font-family: var(--ff-display);
+			p:nth-child(2) {
 				font-size: 3rem;
 				font-weight: 600;
-				opacity: 0.25;
+				line-height: 4.5rem;
 			}
+		}
+	}
 
-			.eyes {
-				margin-top: -3rem;
-			}
+	.bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: absolute;
+		left: 50%;
+		bottom: 0rem;
+		transform: translateX(-50%);
+
+		padding-bottom: 1rem;
+		animation: fade-in 1000ms ease 4500ms both;
+
+		#circle-type {
+			font-family: var(--ff-display);
+			font-size: 3rem;
+			font-weight: 600;
+			opacity: 0.25;
+		}
+
+		.eyes {
+			margin-top: -3rem;
 		}
 	}
 </style>
