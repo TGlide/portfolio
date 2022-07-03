@@ -1,0 +1,10 @@
+@import './reset.css';
+@import './theme.css';
+@import './utility.css';
+
+body {
+  background: var(--night-black);
+  color: var(--ghost-white);
+  font-family: var(--ff-body);
+  min-height: 100vh;
+}

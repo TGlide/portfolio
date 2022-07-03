@@ -1,0 +1,34 @@
+@import "@fontsource/lato";
+@import "@fontsource/poppins";
+
+:root {
+  /* ----- */
+  /* Fonts */
+  /* ----- */
+  --ff-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  --ff-display: "Poppins", var(--ff-fallback);
+  --ff-body: "Lato", var(--ff-fallback);
+
+
+  /* ------ */
+  /* Spaces */
+  /* ------ */
+
+  /* Radius */
+  --radii-sm: 0.25rem;
+  --radii-md: 0.5rem;
+  --radii-lg: 1rem;
+  --radii-full: 9999px;
+
+  /* ------ */
+  /* Colors */
+  /* ------ */
+
+  --ghost-white: #F7FAFF;
+  --fiery-rose: #FF5471;
+  --megaman-blue: #48DBFB;
+  --sea-blue: #54A0FF;
+  --eerie-gray: #262626;
+  --night-black: #00011A;
+}
