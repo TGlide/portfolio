@@ -24,7 +24,7 @@
 	<span class="name"><slot /></span>
 </span>
 
-<style lang="scss">
+<style lang="postcss">
 	@keyframes pop-in {
 		0% {
 			opacity: 0;
@@ -40,38 +40,72 @@
 		position: relative;
 
 		span:not(.name) {
+			display: none;
+
 			font-family: var(--ff-decorative);
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			color: var(--fiery-rose);
+
+			@media (--bp-md) {
+				display: inline-block;
+			}
+
+			@media (--bp-lg) {
+				font-size: 1.5rem;
+			}
 		}
 
 		.line-left {
 			position: absolute;
-			top: -2.5rem;
-			left: 2.5rem;
+			top: -2.25rem;
+			left: 0.5rem;
 			transform: rotate(-10deg);
+
+			@media (--bp-lg) {
+				top: -2.5rem;
+				left: 2.5rem;
+			}
 		}
 
 		.text-left {
 			position: absolute;
-			top: -0.5rem;
-			left: -0.5rem;
+			top: -1rem;
+			left: -2rem;
+
 			--base-transform: translateY(-100%) rotate(-15deg);
-			animation: pop-in 500ms 3750ms ease-in-out both;
+			animation: pop-in 500ms 2000ms ease-in-out both;
+
+			@media (--bp-lg) {
+				animation-delay: 3750ms;
+				top: -0.5rem;
+				left: -0.5rem;
+			}
 		}
 
 		.line-right {
 			position: absolute;
-			top: -2.5rem;
-			right: 2rem;
+			top: -2rem;
+			right: 0.5rem;
+
+			@media (--bp-lg) {
+				top: -2.5rem;
+				right: 2rem;
+			}
 		}
 
 		.text-right {
 			position: absolute;
-			top: -0.6rem;
-			right: -1rem;
+			top: -1.1rem;
+			right: -1.5rem;
+
 			--base-transform: translateY(-100%) rotate(15deg);
-			animation: pop-in 500ms 3750ms ease-in-out both;
+			animation: pop-in 500ms 2000ms ease-in-out both;
+
+			@media (--bp-lg) {
+				animation-delay: 3750ms;
+				top: -0.6rem;
+				right: -1rem;
+			}
 		}
 
 		.name {
@@ -88,6 +122,10 @@
 	path {
 		stroke-dasharray: 50;
 		stroke-dashoffset: 50;
-		animation: dash 500ms 3250ms ease-out forwards;
+		animation: dash 500ms 1500ms ease-out forwards;
+
+		@media (--bp-lg) {
+			animation: dash 500ms 3250ms ease-out forwards;
+		}
 	}
 </style>

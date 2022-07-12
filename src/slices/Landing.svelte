@@ -1,18 +1,32 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/env';
 	import Eyes from '$components/Eyes';
 	import DecorativeText from '$UI/DecorativeText.svelte';
-
-	import { onBrowserMount } from '$utils/svelte';
 	// @ts-ignore
 	import CircleType from 'circletype';
+	import { onMount } from 'svelte';
 
-	onBrowserMount(() => {
+	let innerWidth = 1024;
+	let circleType: any = null;
+
+	const generateCircleType = (isLg: boolean) => {
 		if (!browser) return;
-		const circleType = new CircleType(document.getElementById('circle-type'));
-		circleType.radius(270);
-	});
+
+		circleType?.destroy();
+
+		const element = document.getElementById('circle-type');
+		if (!element) return;
+
+		circleType = new CircleType(element);
+		circleType.radius(isLg ? 270 : 180);
+	};
+
+	$: isLg = innerWidth >= 1024;
+	$: generateCircleType(isLg);
+	onMount(() => generateCircleType(isLg));
 </script>
+
+<svelte:window bind:innerWidth />
 
 <section id="hero">
 	<div class="circle" />
@@ -31,7 +45,7 @@
 	</div>
 </section>
 
-<style lang="scss">
+<style lang="postcss">
 	@keyframes expand {
 		0% {
 			margin-left: 0rem;
@@ -39,7 +53,7 @@
 			max-width: 0;
 		}
 		100% {
-			margin-left: 4rem;
+			margin-left: var(--expand-ml, 0);
 			padding-right: 1rem;
 			max-width: 520px;
 		}
@@ -75,55 +89,114 @@
 	}
 
 	#hero {
-		display: grid;
-		place-items: center;
 		height: 100vh;
-		min-height: 500px;
+		min-height: 650px;
+		max-height: 1440px;
 		position: relative;
 		overflow: hidden;
 
+		@media (--bp-md) {
+			display: grid;
+			place-items: center;
+			min-height: 800px;
+		}
+
 		> .circle {
 			position: absolute;
-			top: -320px;
-			right: -250px;
-			width: 606px;
-			height: 606px;
+			top: -350px;
+			right: -400px;
+
+			--size: 600px;
+			width: var(--size);
+			height: var(--size);
+
 			background: var(--fiery-rose);
 			opacity: 0.25;
 			border-radius: 50%;
-			animation: scale 750ms 4500ms ease both;
+			animation: scale 750ms 1200ms ease both;
+
+			@media (--bp-lg) {
+				animation: scale 750ms 4500ms ease both;
+				top: -320px;
+				right: -250px;
+			}
 		}
 	}
 
 	.content {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: flex-start;
 		align-items: center;
+		margin-top: 64px;
+
+		@media (--bp-md) {
+			margin-top: 0;
+			flex-direction: row;
+		}
 
 		img {
-			width: 320px;
-			height: 320px;
+			--size: 256px;
+			width: var(--size);
+			height: var(--size);
 
 			animation: fade-top-to-bottom 500ms 500ms ease both;
+
+			@media (--bp-lg) {
+				--size: 320px;
+			}
 		}
 
 		.text {
 			font-family: var(--ff-display);
 			overflow: hidden;
 			white-space: nowrap;
+			text-align: center;
 
-			animation: expand 1750ms 1500ms ease both;
+			@media (--bp-md) {
+				text-align: left;
+				--expand-ml: 2rem;
+				animation: expand 1000ms 1000ms ease both;
+			}
+
+			@media (--bp-lg) {
+				--expand-ml: 4rem;
+				animation: expand 1750ms 1500ms ease both;
+			}
 
 			p:nth-child(1) {
-				font-size: 6rem;
+				font-size: 4.5rem;
 				font-weight: 700;
-				line-height: 9rem;
+				line-height: 6rem;
+
+				animation: fade-top-to-bottom 500ms 750ms ease both;
+
+				@media (--bp-md) {
+					animation: none;
+				}
+
+				@media (--bp-lg) {
+					font-size: 6rem;
+					line-height: 9rem;
+				}
 			}
 
 			p:nth-child(2) {
-				font-size: 3rem;
+				font-size: 2rem;
+				line-height: 3.5rem;
 				font-weight: 600;
-				line-height: 4.5rem;
+
+				animation: fade-top-to-bottom 500ms 1000ms ease both;
+
+				@media (--bp-md) {
+					animation: none;
+				}
+
+				@media (--bp-lg) {
+					animation: none;
+					font-size: 3rem;
+					line-height: 4.5rem;
+				}
 			}
 		}
 	}
@@ -139,17 +212,30 @@
 		transform: translateX(-50%);
 
 		padding-bottom: 1rem;
-		animation: fade-in 1000ms ease 4500ms both;
+
+		animation: fade-in 1000ms ease 1250ms both;
+
+		@media (--bp-lg) {
+			animation: fade-in 1000ms ease 4500ms both;
+		}
 
 		#circle-type {
 			font-family: var(--ff-display);
-			font-size: 3rem;
+			font-size: 2rem;
 			font-weight: 600;
 			opacity: 0.25;
+
+			@media (--bp-lg) {
+				font-size: 3rem;
+			}
 		}
 
 		.eyes {
-			margin-top: -3rem;
+			margin-top: -2.5rem;
+
+			@media (--bp-lg) {
+				margin-top: -3rem;
+			}
 		}
 	}
 </style>
