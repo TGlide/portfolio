@@ -1,6 +1,8 @@
 /* Layouts */
 .container {
   padding: 1rem;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 /* Flexbox */

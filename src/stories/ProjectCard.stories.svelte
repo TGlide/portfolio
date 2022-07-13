@@ -66,7 +66,7 @@
 	<!-- svelte-ignore missing-declaration -- Require does not need to be defined -->
 	<ProjectCard
 		{...args}
-		image={args.showImage ? imageProp : undefined}
+		image={args.showImage ? { ...imageProp, position: args.imagePosition } : undefined}
 		logo={{
 			src: logo,
 			alt: 'Project logo'

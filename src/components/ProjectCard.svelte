@@ -9,15 +9,26 @@
 		alt: string;
 	};
 
-	export let image: Image | undefined = undefined;
-	export let logo: Image;
+	type PositionedImage = Image & {
+		position?: 'top' | 'bottom';
+	};
+
+	type TypedLogo = {
+		text: string;
+		color: string;
+		bgColor: string;
+	};
+
+	function isImage(image: any): image is Image {
+		return typeof image === 'object' && 'src' in image && 'alt' in image;
+	}
+
+	export let image: PositionedImage | undefined = undefined;
+	$: imagePosition = image?.position ?? 'top';
+	export let logo: Image | TypedLogo | undefined = undefined;
 	export let title: string;
 	export let description: string;
 	export let links: Link[] | undefined = undefined;
-
-	let imagePositionProp: 'top' | 'bottom' | undefined = undefined;
-	export { imagePositionProp as imagePosition };
-	$: imagePosition = imagePositionProp ? imagePositionProp : 'top';
 </script>
 
 <div class="project-card" class:reverse={imagePosition === 'bottom'}>
@@ -26,7 +37,15 @@
 	{/if}
 	<div class="content">
 		<div class="header">
-			<img src={logo.src} alt={logo.alt} class="logo" />
+			{#if isImage(logo)}
+				<img src={logo.src} alt={logo.alt} class="logo" />
+			{:else if logo}
+				<div class="logo" style:color={logo.color} style:background-color={logo.bgColor}>
+					<span>
+						{logo.text}
+					</span>
+				</div>
+			{/if}
 			<p>{title}</p>
 		</div>
 		<p class="description">
@@ -46,7 +65,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	.project-card {
 		display: flex;
 		flex-direction: column;
@@ -54,7 +73,6 @@
 		border-radius: var(--radii-12);
 
 		padding: 1rem;
-		width: 20rem; /* 320px */
 
 		&.reverse {
 			flex-direction: column-reverse;
@@ -71,11 +89,13 @@
 
 	.thumbnail {
 		width: 100%;
+		max-height: 450px;
+		object-fit: cover;
 		border-radius: var(--radii-8);
 	}
 
 	.content > * + * {
-		margin-top: 0.5rem;
+		margin-top: 0.75rem;
 	}
 
 	.header {
@@ -84,13 +104,20 @@
 		align-items: center;
 
 		> * + * {
-			margin-left: 1rem;
+			margin-left: 0.75rem;
 		}
 
-		> img {
+		> .logo {
 			border-radius: var(--radii-8);
-			width: 2.375rem; /* 48px */
-			height: 2.375rem;
+			width: 3rem; /* 48px */
+			height: 3rem;
+
+			&:is(div) {
+				display: grid;
+				place-items: center;
+				font-size: 1.5rem;
+				font-weight: 600;
+			}
 		}
 
 		> p {
@@ -101,9 +128,9 @@
 	}
 
 	.description {
-		font-size: 1rem;
+		font-size: 1.05rem;
 		font-weight: 300;
-		line-height: 1.2rem;
+		line-height: 1.25rem;
 	}
 
 	.links {
@@ -116,12 +143,12 @@
 		}
 
 		> * {
-			opacity: 0.25;
+			opacity: 0.5;
 		}
 
 		> a {
 			font-family: var(--ff-display);
-			font-size: 0.75rem;
+			font-size: 0.875rem;
 			font-weight: 500;
 			transition: opacity 200ms ease;
 		}

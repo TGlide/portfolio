@@ -34,5 +34,6 @@
   --night-black: #00011A;
 }
 
+@custom-media --bp-sm (min-width: 576px);
 @custom-media --bp-md (min-width: 768px);
 @custom-media --bp-lg (min-width: 1024px);
