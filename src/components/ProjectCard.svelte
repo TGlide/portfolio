@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	type Link = {
 		href: string;
 		text: string;
@@ -19,16 +19,29 @@
 		bgColor: string;
 	};
 
+	export type ProjectCardProps = {
+		image?: PositionedImage;
+		logo?: Image | TypedLogo;
+		title: string;
+		description: string;
+		links?: Link[];
+	};
+</script>
+
+<script lang="ts">
+	type $$Props = ProjectCardProps;
+
+	export let image: $$Props['image'] = undefined;
+	export let logo: $$Props['logo'] = undefined;
+	export let title: $$Props['title'];
+	export let description: $$Props['description'];
+	export let links: $$Props['links'] = undefined;
+
+	$: imagePosition = image?.position ?? 'top';
+
 	function isImage(image: any): image is Image {
 		return typeof image === 'object' && 'src' in image && 'alt' in image;
 	}
-
-	export let image: PositionedImage | undefined = undefined;
-	$: imagePosition = image?.position ?? 'top';
-	export let logo: Image | TypedLogo | undefined = undefined;
-	export let title: string;
-	export let description: string;
-	export let links: Link[] | undefined = undefined;
 </script>
 
 <div class="project-card" class:reverse={imagePosition === 'bottom'}>
