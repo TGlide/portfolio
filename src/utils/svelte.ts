@@ -7,3 +7,8 @@ export const onBrowserMount = (cb: () => void) => {
 		cb();
 	});
 };
+
+export const getWindowHeight = () => {
+	if (!browser) return 0;
+	return window.innerHeight;
+};

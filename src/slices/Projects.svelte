@@ -15,20 +15,20 @@
 		</div>
 
 		<div class="grid grid-md">
-			{#each divideArray(projects, 2) as projectGroup}
+			{#each divideArray(projects, 2) as projectGroup, i}
 				<div class="column">
 					{#each projectGroup as project}
-						<ProjectCard {...project} />
+						<ProjectCard {...project} animationDelay="{i * 100}ms" />
 					{/each}
 				</div>
 			{/each}
 		</div>
 
 		<div class="grid grid-lg">
-			{#each divideArray(projects, 3) as projectGroup}
+			{#each divideArray(projects, 3) as projectGroup, i}
 				<div class="column">
 					{#each projectGroup as project}
-						<ProjectCard {...project} />
+						<ProjectCard {...project} animationDelay="{i * 100}ms" />
 					{/each}
 				</div>
 			{/each}
@@ -39,6 +39,7 @@
 <style lang="postcss">
 	#projects {
 		margin-top: 1rem;
+		padding-bottom: 2rem;
 	}
 
 	.grid {
@@ -53,7 +54,7 @@
 	}
 
 	.grid-sm {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 
 		@media (--bp-md) {
 			display: none;
@@ -61,7 +62,7 @@
 	}
 
 	.grid-md {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		display: none;
 
 		@media (--bp-md) {
@@ -74,7 +75,7 @@
 	}
 
 	.grid-lg {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		display: none;
 
 		@media (--bp-lg) {

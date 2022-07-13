@@ -25,10 +25,13 @@
 		title: string;
 		description: string;
 		links?: Link[];
+		animationDelay?: string;
 	};
 </script>
 
 <script lang="ts">
+	import { getWindowHeight, onBrowserMount } from '$utils/svelte';
+
 	type $$Props = ProjectCardProps;
 
 	export let image: $$Props['image'] = undefined;
@@ -36,15 +39,46 @@
 	export let title: $$Props['title'];
 	export let description: $$Props['description'];
 	export let links: $$Props['links'] = undefined;
+	export let animationDelay: $$Props['animationDelay'] = undefined;
 
 	$: imagePosition = image?.position ?? 'top';
+
+	let hasJs = false;
+	let mounted = false;
+	onBrowserMount(() => {
+		hasJs = true;
+		mounted = true;
+	});
+
+	let scrollY = 0;
+	$: scrollBottom = scrollY + getWindowHeight();
+
+	let el: HTMLDivElement | null = null;
+	$: elY = (el?.getBoundingClientRect()?.top ?? 0) + scrollY;
+
+	const triggerOffset = 200;
+
+	let animationTriggered = false;
+	$: {
+		if (elY < scrollBottom - triggerOffset && mounted) {
+			animationTriggered = true;
+		}
+	}
 
 	function isImage(image: any): image is Image {
 		return typeof image === 'object' && 'src' in image && 'alt' in image;
 	}
 </script>
 
-<div class="project-card" class:reverse={imagePosition === 'bottom'}>
+<svelte:window bind:scrollY />
+
+<div
+	class="project-card"
+	class:reverse={imagePosition === 'bottom'}
+	class:animate={animationTriggered || !hasJs}
+	style:--animation-delay={animationDelay ?? '0ms'}
+	bind:this={el}
+>
 	{#if image}
 		<img class="thumbnail" src={image.src} alt={image.alt} />
 	{/if}
@@ -79,6 +113,17 @@
 </div>
 
 <style lang="postcss">
+	@keyframes fade-bottom-to-top {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.project-card {
 		display: flex;
 		flex-direction: column;
@@ -86,6 +131,13 @@
 		border-radius: var(--radii-12);
 
 		padding: 1rem;
+
+		opacity: 0;
+		transform: translateY(16px);
+
+		&.animate {
+			animation: fade-bottom-to-top 0.5s ease var(--animation-delay, 0ms) both;
+		}
 
 		&.reverse {
 			flex-direction: column-reverse;
