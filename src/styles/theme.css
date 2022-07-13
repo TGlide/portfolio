@@ -20,18 +20,26 @@
   --radii-16: 1rem;
   --radii-full: 9999px;
 
-  /* Breakpoints */
-
   /* ------ */
   /* Colors */
   /* ------ */
+  --ghost-white-hsl: 218, 100%, 98%;
+  --ghost-white: hsl(var(--ghost-white-hsl));
 
-  --ghost-white: #F7FAFF;
-  --fiery-rose: #FF5471;
-  --megaman-blue: #48DBFB;
-  --sea-blue: #54A0FF;
-  --eerie-gray: #262626;
-  --night-black: #00011A;
+  --fiery-rose-hsl: 350, 100%, 66%;
+  --fiery-rose: hsl(var(--fiery-rose-hsl));
+
+  --megaman-blue-hsl: 191, 96%, 63%;
+  --megaman-blue: hsl(var(--megaman-blue-hsl));
+
+  --sea-blue-hsl: 213, 100%, 66%;
+  --sea-blue: hsl(var(--sea-blue-hsl));
+
+  --eerie-gray-hsl: 0, 0%, 15%;
+  --eerie-gray: hsl(var(--eerie-gray-hsl));
+
+  --night-black-hsl: 238, 100%, 5%;
+  --night-black: hsl(var(--night-black-hsl));
 }
 
 @custom-media --bp-sm (min-width: 576px);

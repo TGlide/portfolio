@@ -28,17 +28,25 @@
   flex: 1;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
 /* Fonts */
-.ff-mono {
-  font-family: var(--font-mono);
-}
-
-.ff-sans {
-  font-family: var(--font-sans);
-}
-
 .ff-display {
-  font-family: var(--font-display);
+  font-family: var(--ff-display);
+}
+
+.ff-body {
+  font-family: var(--ff-body);
+}
+
+.ff-decorative {
+  font-family: var(--ff-decorative);
 }
 
 /* Spaces */
