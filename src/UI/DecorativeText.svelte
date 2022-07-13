@@ -76,7 +76,7 @@
 			animation: pop-in 500ms 2000ms ease-in-out both;
 
 			@media (--bp-lg) {
-				animation-delay: 3750ms;
+				animation-delay: 2500ms;
 				top: -0.5rem;
 				left: -0.5rem;
 			}
@@ -102,7 +102,7 @@
 			animation: pop-in 500ms 2000ms ease-in-out both;
 
 			@media (--bp-lg) {
-				animation-delay: 3750ms;
+				animation-delay: 2500ms;
 				top: -0.6rem;
 				right: -1rem;
 			}
@@ -125,7 +125,7 @@
 		animation: dash 500ms 1500ms ease-out forwards;
 
 		@media (--bp-lg) {
-			animation: dash 500ms 3250ms ease-out forwards;
+			animation-delay: 2000ms;
 		}
 	}
 </style>

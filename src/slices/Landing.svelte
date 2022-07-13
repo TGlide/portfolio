@@ -55,7 +55,7 @@
 		100% {
 			margin-left: var(--expand-ml, 0);
 			padding-right: 1rem;
-			max-width: 520px;
+			max-width: var(--expand-max-w, 0);
 		}
 	}
 
@@ -113,10 +113,16 @@
 			background: var(--fiery-rose);
 			opacity: 0.25;
 			border-radius: 50%;
-			animation: scale 750ms 1200ms ease both;
+			animation: scale 1500ms 2000ms ease both;
+
+			@media (--bp-md) {
+				animation-duration: 1000ms;
+				animation-delay: 3000ms;
+			}
 
 			@media (--bp-lg) {
-				animation: scale 750ms 4500ms ease both;
+				animation-delay: 3500ms;
+				animation-duration: 1000ms;
 				top: -320px;
 				right: -250px;
 			}
@@ -156,12 +162,14 @@
 			@media (--bp-md) {
 				text-align: left;
 				--expand-ml: 2rem;
+				--expand-max-w: 25rem;
 				animation: expand 1000ms 1000ms ease both;
 			}
 
 			@media (--bp-lg) {
 				--expand-ml: 4rem;
-				animation: expand 1750ms 1500ms ease both;
+				--expand-max-w: 35rem;
+				animation: expand 1250ms 1000ms ease both;
 			}
 
 			p:nth-child(1) {
@@ -169,7 +177,7 @@
 				font-weight: 700;
 				line-height: 6rem;
 
-				animation: fade-top-to-bottom 500ms 750ms ease both;
+				animation: fade-top-to-bottom 1000ms 750ms ease both;
 
 				@media (--bp-md) {
 					animation: none;
@@ -186,7 +194,7 @@
 				line-height: 3.5rem;
 				font-weight: 600;
 
-				animation: fade-top-to-bottom 500ms 1000ms ease both;
+				animation: fade-top-to-bottom 1000ms 1250ms ease both;
 
 				@media (--bp-md) {
 					animation: none;
@@ -213,10 +221,14 @@
 
 		padding-bottom: 1rem;
 
-		animation: fade-in 1000ms ease 1250ms both;
+		animation: fade-in 1000ms ease 1750ms both;
+
+		@media (--bp-md) {
+			animation-delay: 2500ms;
+		}
 
 		@media (--bp-lg) {
-			animation: fade-in 1000ms ease 4500ms both;
+			animation-delay: 3000ms;
 		}
 
 		#circle-type {
