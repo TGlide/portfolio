@@ -2,6 +2,7 @@
 	import ProjectCard from '$components/ProjectCard.svelte';
 	import { projects } from '$data/projects';
 	import { divideArray } from '$utils/array';
+	console.log(projects, divideArray(projects, 3));
 </script>
 
 <section id="projects">

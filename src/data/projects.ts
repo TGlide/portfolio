@@ -24,6 +24,16 @@ export const projects: ProjectCardProps[] = [
 		]
 	},
 	{
+		title: 'Weather PWA',
+		description: 'A weather PWA built with React, Typescript and SCSS',
+		logo: { src: 'projects/weather/logo.svg', alt: 'Weather app logo' },
+		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
+		links: [
+			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
+			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' }
+		]
+	},
+	{
 		title: 'Movie Search',
 		description: 'A Next.js Web App to check if your letterboxd list movies are on netflix',
 		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
@@ -36,16 +46,7 @@ export const projects: ProjectCardProps[] = [
 			{ href: 'https://github.com/TGlide/movie-search', text: 'source code' }
 		]
 	},
-	{
-		title: 'Weather PWA',
-		description: 'A weather PWA built with React, Typescript and SCSS',
-		logo: { src: 'projects/weather/logo.svg', alt: 'Weather app logo' },
-		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
-		links: [
-			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' }
-		]
-	},
+
 	{
 		title: "Warrior's Tenacity",
 		description:
@@ -58,6 +59,25 @@ export const projects: ProjectCardProps[] = [
 		description: 'Screen Recorder built with Vue and Electron',
 		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
 		links: [{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' }]
+	},
+
+	{
+		title: 'Show and tell',
+		description:
+			'A short presentation about animations during my time at Significa. Built with Svelte and Reveal.js',
+		logo: { text: 'ST', color: '#ed7176', bgColor: '#191919' },
+		links: [
+			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
+			{
+				href: 'https://github.com/TGlide/show-and-tell',
+				text: 'source code'
+			}
+		],
+		image: {
+			src: 'projects/show-and-tell/image.png',
+			alt: 'Title "Demystifying animations" with colored shapes in the background',
+			position: 'bottom'
+		}
 	},
 	{
 		title: 'Chuck Norris Facts',
