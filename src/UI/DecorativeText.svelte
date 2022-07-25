@@ -39,7 +39,7 @@
 	.decorative-text {
 		position: relative;
 
-		span:not(.name) {
+		& span:not(.name) {
 			display: none;
 
 			font-family: var(--ff-decorative);
@@ -55,7 +55,7 @@
 			}
 		}
 
-		.line-left {
+		& .line-left {
 			position: absolute;
 			top: -2.25rem;
 			left: 0.5rem;
@@ -67,7 +67,7 @@
 			}
 		}
 
-		.text-left {
+		& .text-left {
 			position: absolute;
 			top: -1rem;
 			left: -2rem;
@@ -82,7 +82,7 @@
 			}
 		}
 
-		.line-right {
+		& .line-right {
 			position: absolute;
 			top: -2rem;
 			right: 0.5rem;
@@ -93,7 +93,7 @@
 			}
 		}
 
-		.text-right {
+		& .text-right {
 			position: absolute;
 			top: -1.1rem;
 			right: -1.5rem;
@@ -108,7 +108,7 @@
 			}
 		}
 
-		.name {
+		& .name {
 			border-bottom: 3px var(--megaman-blue) solid;
 		}
 	}

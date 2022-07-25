@@ -1,11 +1,15 @@
-const config = {
-	plugins: [
-		require('autoprefixer'),
-		require('postcss-nested'),
-		require('postcss-custom-media')({
-			importFrom: 'src/styles/theme.css'
-		})
-	]
+module.exports = {
+	plugins: {
+		'postcss-preset-env': {
+			autoprefixer: {
+				flexbox: 'no-2009'
+			},
+			features: {
+				'custom-media-queries': true,
+				'nesting-rules': true,
+				'custom-properties': false
+			}
+		},
+		'postcss-extend-rule': {}
+	}
 };
-
-module.exports = config;

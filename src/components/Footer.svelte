@@ -42,7 +42,7 @@
 		padding: 0 3rem 1rem;
 		border-bottom: 1px solid hsla(var(--ghost-white-hsl), 0.25);
 
-		a {
+		& a {
 			transition: ease 200ms;
 
 			&:hover {
@@ -56,7 +56,7 @@
 		font-size: 1.5rem;
 		margin-top: 1.125rem;
 
-		span {
+		& span {
 			color: var(--fiery-rose);
 			font-family: var(--ff-decorative);
 		}

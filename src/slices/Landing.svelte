@@ -108,7 +108,7 @@
 			min-height: 800px;
 		}
 
-		> .circle {
+		& > .circle {
 			position: absolute;
 			top: -350px;
 			right: -400px;
@@ -148,7 +148,7 @@
 			flex-direction: row;
 		}
 
-		img {
+		& img {
 			--size: 256px;
 			width: var(--size);
 			height: var(--size);
@@ -160,7 +160,7 @@
 			}
 		}
 
-		.text {
+		& .text {
 			font-family: var(--ff-display);
 			overflow: hidden;
 			white-space: nowrap;
@@ -179,7 +179,7 @@
 				animation: expand 1250ms 1500ms ease both;
 			}
 
-			p:nth-child(1) {
+			& p:nth-child(1) {
 				font-size: 4.5rem;
 				font-weight: 700;
 				line-height: 6rem;
@@ -196,7 +196,7 @@
 				}
 			}
 
-			p:nth-child(2) {
+			& p:nth-child(2) {
 				font-size: 2rem;
 				line-height: 3.5rem;
 				font-weight: 600;
@@ -238,7 +238,7 @@
 			animation-delay: 3000ms;
 		}
 
-		#circle-type {
+		& #circle-type {
 			font-family: var(--ff-display);
 			font-size: 2rem;
 			font-weight: 600;
@@ -249,7 +249,7 @@
 			}
 		}
 
-		.eyes {
+		& .eyes {
 			margin-top: -2.5rem;
 
 			@media (--bp-lg) {

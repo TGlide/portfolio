@@ -46,8 +46,8 @@
 		display: grid;
 		gap: 1rem;
 
-		.column {
-			:global(> * + *) {
+		& .column {
+			& :global(> * + *) {
 				margin-top: 1rem;
 			}
 		}
