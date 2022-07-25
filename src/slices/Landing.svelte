@@ -23,7 +23,10 @@
 
 	$: isLg = innerWidth >= 1024;
 	$: generateCircleType(isLg);
-	onMount(() => generateCircleType(isLg));
+
+	onMount(() => {
+		generateCircleType(isLg);
+	});
 </script>
 
 <svelte:window bind:innerWidth />
@@ -34,7 +37,11 @@
 		<img src="avatar.png" alt="Thomas Gouveia Lopes smiling" />
 		<div class="text">
 			<p>Hi!</p>
-			<p>My name is <DecorativeText>Thomas</DecorativeText>.</p>
+			<p>
+				<span>My name is</span>
+				<DecorativeText>Thomas</DecorativeText>
+				<span class="dot">.</span>
+			</p>
 		</div>
 	</div>
 	<div class="bottom">
@@ -163,13 +170,13 @@
 				text-align: left;
 				--expand-ml: 2rem;
 				--expand-max-w: 25rem;
-				animation: expand 1000ms 1000ms ease both;
+				animation: expand 1000ms 1500ms ease both;
 			}
 
 			@media (--bp-lg) {
 				--expand-ml: 4rem;
 				--expand-max-w: 35rem;
-				animation: expand 1250ms 1000ms ease both;
+				animation: expand 1250ms 1500ms ease both;
 			}
 
 			p:nth-child(1) {
@@ -249,5 +256,9 @@
 				margin-top: -3rem;
 			}
 		}
+	}
+
+	.dot {
+		margin-left: -0.5rem;
 	}
 </style>
