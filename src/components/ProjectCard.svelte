@@ -142,7 +142,7 @@
 		&.reverse {
 			flex-direction: column-reverse;
 
-			& > * + * {
+			> * + * {
 				margin-bottom: 1rem;
 			}
 		}
@@ -168,11 +168,11 @@
 		flex-direction: row;
 		align-items: center;
 
-		& > * + * {
+		> * + * {
 			margin-left: 0.75rem;
 		}
 
-		& > .logo {
+		> .logo {
 			border-radius: var(--radii-8);
 			width: 3rem; /* 48px */
 			height: 3rem;
@@ -185,7 +185,7 @@
 			}
 		}
 
-		& > p {
+		> p {
 			font-family: var(--ff-display);
 			font-size: 1.5rem;
 			font-weight: 500;
@@ -203,22 +203,22 @@
 		flex-direction: row;
 		align-items: center;
 
-		& > * + * {
+		> * + * {
 			margin-left: 0.5rem;
 		}
 
-		& > * {
+		> * {
 			opacity: 0.5;
 		}
 
-		& > a {
+		> a {
 			font-family: var(--ff-display);
 			font-size: 0.875rem;
 			font-weight: 500;
 			transition: opacity 200ms ease;
 		}
 
-		& > a:hover {
+		> a:hover {
 			opacity: 1;
 		}
 	}
