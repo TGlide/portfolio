@@ -6,22 +6,22 @@ export const projects: ProjectCardProps[] = [
 		description: 'Wordle clone with support for multiple languages',
 		logo: {
 			src: 'projects/wordex/logo.svg',
-			alt: 'Wordex logo'
+			alt: 'Wordex logo',
 		},
 		image: {
 			src: 'projects/wordex/image.png',
-			alt: 'Wordex image'
+			alt: 'Wordex image',
 		},
 		links: [
 			{
 				href: 'https://wordex.app/',
-				text: 'check it out'
+				text: 'check it out',
 			},
 			{
 				href: 'https://github.com/tGlide/wordex',
-				text: 'source code'
-			}
-		]
+				text: 'source code',
+			},
+		],
 	},
 	{
 		title: 'Weather PWA',
@@ -30,8 +30,8 @@ export const projects: ProjectCardProps[] = [
 		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
 		links: [
 			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' }
-		]
+			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' },
+		],
 	},
 	{
 		title: 'Movie Search',
@@ -39,26 +39,42 @@ export const projects: ProjectCardProps[] = [
 		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
 		image: {
 			src: 'projects/movie-search/image.png',
-			alt: "A table with 3 headers (Netflix, with a number alongside a green check indicating the movies on netflix, and a number alongside a red x indicating the movies that aren't), title, and rating (based on IMDB)."
+			alt: "A table with 3 headers (Netflix, with a number alongside a green check indicating the movies on netflix, and a number alongside a red x indicating the movies that aren't), title, and rating (based on IMDB).",
 		},
 		links: [
 			{ href: 'https://movie-search-iota.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/movie-search', text: 'source code' }
-		]
-	},
-
-	{
-		title: "Warrior's Tenacity",
-		description:
-			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
-		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
-		logo: { text: 'W', color: '#E36018', bgColor: '#170005' }
+			{ href: 'https://github.com/TGlide/movie-search', text: 'source code' },
+		],
 	},
 	{
 		title: 'Screen Recorder',
 		description: 'Screen Recorder built with Vue and Electron',
 		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
-		links: [{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' }]
+		links: [
+			{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' },
+		],
+	},
+
+	{
+		title: 'Vintage Cars',
+		description:
+			'A virtual gallery of vintage cars. Done for a job interview, previously coupled together with a GraphQL server, and later changed to be purely static.',
+		logo: { text: 'VC', color: '#C8451B', bgColor: '#171923' },
+		image: {
+			src: 'projects/vintage-cars/image.png',
+			alt: 'A website containing a title written Chuck Norris Facts, a search bar, and a search button.',
+			position: 'top',
+		},
+		links: [
+			{
+				href: 'https://car-gallery-webapp.vercel.app/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/TGlide/car-gallery-webapp',
+				text: 'source code',
+			},
+		],
 	},
 
 	{
@@ -70,14 +86,14 @@ export const projects: ProjectCardProps[] = [
 			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
 			{
 				href: 'https://github.com/TGlide/show-and-tell',
-				text: 'source code'
-			}
+				text: 'source code',
+			},
 		],
 		image: {
 			src: 'projects/show-and-tell/image.png',
 			alt: 'Title "Demystifying animations" with colored shapes in the background',
-			position: 'bottom'
-		}
+			position: 'bottom',
+		},
 	},
 	{
 		title: 'Chuck Norris Facts',
@@ -86,11 +102,18 @@ export const projects: ProjectCardProps[] = [
 		image: {
 			src: 'projects/chuck/image.png',
 			alt: 'A website containing a title written Chuck Norris Facts, a search bar, and a search button.',
-			position: 'bottom'
+			position: 'bottom',
 		},
 		links: [
 			{ href: 'https://chuck-norris-facts-nextjs.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/chuck-norris-facts-nextjs', text: 'source code' }
-		]
-	}
+			{ href: 'https://github.com/TGlide/chuck-norris-facts-nextjs', text: 'source code' },
+		],
+	},
+	{
+		title: "Warrior's Tenacity",
+		description:
+			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
+		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
+		logo: { text: 'W', color: '#E36018', bgColor: '#170005' },
+	},
 ];
