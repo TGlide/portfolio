@@ -107,32 +107,32 @@
 			place-items: center;
 			min-height: 800px;
 		}
+	}
 
-		> .circle {
-			position: absolute;
-			top: -350px;
-			right: -400px;
+	.circle {
+		position: absolute;
+		top: -350px;
+		right: -400px;
 
-			--size: 600px;
-			width: var(--size);
-			height: var(--size);
+		--size: 600px;
+		width: var(--size);
+		height: var(--size);
 
-			background: var(--fiery-rose);
-			opacity: 0.25;
-			border-radius: 50%;
-			animation: scale 1500ms 2000ms ease both;
+		background: var(--fiery-rose);
+		opacity: 0.25;
+		border-radius: 50%;
+		animation: scale 1500ms 2000ms ease both;
 
-			@media (--bp-md) {
-				animation-duration: 1000ms;
-				animation-delay: 3000ms;
-			}
+		@media (--bp-md) {
+			animation-duration: 1000ms;
+			animation-delay: 3000ms;
+		}
 
-			@media (--bp-lg) {
-				animation-delay: 3500ms;
-				animation-duration: 1000ms;
-				top: -320px;
-				right: -250px;
-			}
+		@media (--bp-lg) {
+			animation-delay: 3500ms;
+			animation-duration: 1000ms;
+			top: -320px;
+			right: -250px;
 		}
 	}
 
@@ -153,7 +153,7 @@
 			width: var(--size);
 			height: var(--size);
 
-			animation: fade-top-to-bottom 500ms 500ms ease both;
+			animation: fade-top-to-bottom 750ms 500ms ease both;
 
 			@media (--bp-lg) {
 				--size: 320px;
@@ -168,15 +168,12 @@
 
 			@media (--bp-md) {
 				text-align: left;
-				--expand-ml: 2rem;
-				--expand-max-w: 25rem;
-				animation: expand 1000ms 1500ms ease both;
+				margin-left: 2rem;
+				padding-right: 1rem;
 			}
 
 			@media (--bp-lg) {
-				--expand-ml: 4rem;
-				--expand-max-w: 35rem;
-				animation: expand 1250ms 2000ms ease both;
+				margin-left: 4rem;
 			}
 
 			p:nth-child(1) {
@@ -184,11 +181,7 @@
 				font-weight: 700;
 				line-height: 6rem;
 
-				animation: fade-top-to-bottom 1000ms 750ms ease both;
-
-				@media (--bp-md) {
-					animation: none;
-				}
+				animation: fade-top-to-bottom 625ms 1000ms ease both;
 
 				@media (--bp-lg) {
 					font-size: 6rem;
@@ -200,15 +193,11 @@
 				font-size: 2rem;
 				line-height: 3.5rem;
 				font-weight: 600;
+				margin-top: -1rem;
 
-				animation: fade-top-to-bottom 1000ms 1250ms ease both;
-
-				@media (--bp-md) {
-					animation: none;
-				}
+				animation: fade-top-to-bottom 500ms 1500ms ease both;
 
 				@media (--bp-lg) {
-					animation: none;
 					font-size: 3rem;
 					line-height: 4.5rem;
 				}

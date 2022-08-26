@@ -193,9 +193,10 @@
 	}
 
 	.description {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		font-weight: 300;
 		line-height: 1.45rem;
+		opacity: 0.9;
 	}
 
 	.links {

@@ -109,7 +109,18 @@
 		}
 
 		.name {
-			border-bottom: 3px var(--megaman-blue) solid;
+			border-bottom: 3px hsla(var(--megaman-blue-hsl), 1) solid;
+			transition: border 200ms ease;
+			user-select: none;
+			&:hover {
+				border-color: hsla(var(--megaman-blue-hsl), 0.75);
+				cursor: pointer;
+			}
+
+			&:active {
+				/* TODO: Remove when about me section is added */
+				border-color: hsla(var(--fiery-rose-hsl), 0.75);
+			}
 		}
 	}
 
