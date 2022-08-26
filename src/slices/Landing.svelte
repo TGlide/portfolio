@@ -176,7 +176,7 @@
 			@media (--bp-lg) {
 				--expand-ml: 4rem;
 				--expand-max-w: 35rem;
-				animation: expand 1250ms 1500ms ease both;
+				animation: expand 1250ms 2000ms ease both;
 			}
 
 			p:nth-child(1) {
