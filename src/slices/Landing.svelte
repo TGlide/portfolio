@@ -36,7 +36,7 @@
 	<div class="content">
 		<img src="avatar.png" alt="Thomas Gouveia Lopes smiling" />
 		<div class="text">
-			<p>Hi!</p>
+			<h1>Hi!</h1>
 			<p>
 				<span>My name is</span>
 				<DecorativeText>Thomas</DecorativeText>
