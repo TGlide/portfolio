@@ -36,6 +36,11 @@
 				</div>
 			{/each}
 		</div>
+		<div class="show-more">
+			<button class:hidden={numShown >= projects.length} on:click={() => (numShown += 6)}>
+				Show more
+			</button>
+		</div>
 	</div>
 </section>
 
@@ -83,6 +88,25 @@
 
 		@media (--bp-lg) {
 			display: grid;
+		}
+	}
+
+	.show-more {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+
+		button {
+			font-family: var(--ff-display);
+			font-size: 1.5rem;
+			font-weight: 600;
+			opacity: 0.5;
+			transition: 200ms ease;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 1;
+			}
 		}
 	}
 </style>

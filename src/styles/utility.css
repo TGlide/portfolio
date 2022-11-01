@@ -66,3 +66,8 @@
 .mt-4 {
   margin-top: 1rem;
 }
+
+/* Misc */
+.hidden {
+  visibility: hidden;
+}
