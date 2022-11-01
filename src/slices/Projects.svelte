@@ -3,7 +3,7 @@
 	import { projects } from '$data/projects';
 	import { divideArray } from '$utils/array';
 
-	let numShown = 8;
+	let numShown = 9;
 	$: slicedProjects = projects.slice(0, numShown);
 </script>
 

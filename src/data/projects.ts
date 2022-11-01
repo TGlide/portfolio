@@ -24,22 +24,13 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Weather PWA',
-		description: 'A weather PWA built with React, Typescript and SCSS',
-		logo: { src: 'projects/weather/logo.svg', alt: 'Weather app logo' },
-		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
-		links: [
-			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' },
-		],
-	},
-	{
 		title: 'Movie Search',
 		description: 'A Next.js Web App to check if your letterboxd list movies are on netflix',
 		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
 		image: {
 			src: 'projects/movie-search/image.png',
 			alt: "A table with 3 headers (Netflix, with a number alongside a green check indicating the movies on netflix, and a number alongside a red x indicating the movies that aren't), title, and rating (based on IMDB).",
+			position: 'bottom',
 		},
 		links: [
 			{ href: 'https://movie-search-iota.vercel.app/', text: 'check it out' },
@@ -47,22 +38,13 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Screen Recorder',
-		description: 'Screen Recorder built with Vue and Electron',
-		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
-		links: [
-			{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' },
-		],
-	},
-
-	{
 		title: 'Vintage Cars',
 		description:
 			'A virtual gallery of vintage cars. Done for a job interview, previously coupled together with a GraphQL server, and later changed to be purely static.',
 		logo: { text: 'VC', color: '#C8451B', bgColor: '#171923' },
 		image: {
 			src: 'projects/vintage-cars/image.png',
-			alt: 'A website containing a title written Chuck Norris Facts, a search bar, and a search button.',
+			alt: 'A preview of the Vintage Cars website',
 			position: 'top',
 		},
 		links: [
@@ -76,24 +58,30 @@ export const projects: ProjectCardProps[] = [
 			},
 		],
 	},
-
 	{
-		title: 'Show and tell',
-		description:
-			'A short presentation about animations during my time at Significa. Built with Svelte and Reveal.js',
-		logo: { text: 'ST', color: '#ed7176', bgColor: '#191919' },
+		title: 'Screen Recorder',
+		description: 'Screen Recorder built with Vue and Electron',
+		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
 		links: [
-			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
-			{
-				href: 'https://github.com/TGlide/show-and-tell',
-				text: 'source code',
-			},
+			{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' },
 		],
-		image: {
-			src: 'projects/show-and-tell/image.png',
-			alt: 'Title "Demystifying animations" with colored shapes in the background',
-			position: 'bottom',
-		},
+	},
+	{
+		title: 'Weather PWA',
+		description: 'A weather PWA built with React, Typescript and SCSS',
+		logo: { src: 'projects/weather/logo.svg', alt: 'Weather app logo' },
+		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
+		links: [
+			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
+			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' },
+		],
+	},
+	{
+		title: "Warrior's Tenacity",
+		description:
+			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
+		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
+		logo: { text: 'W', color: '#E36018', bgColor: '#170005' },
 	},
 	{
 		title: 'Chuck Norris Facts',
@@ -110,10 +98,33 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: "Warrior's Tenacity",
+		title: 'Pathfinder',
+		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
+		logo: { text: 'PF', color: '#fcdc92', bgColor: 'hsl(238, 100%, 5%)' },
+		links: [
+			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
+			{
+				href: 'https://github.com/TGlide/show-and-tell',
+				text: 'source code',
+			},
+		],
+	},
+	{
+		title: 'Show and tell',
 		description:
-			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
-		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
-		logo: { text: 'W', color: '#E36018', bgColor: '#170005' },
+			'A short presentation about animations during my time at Significa. Built with Svelte and Reveal.js',
+		logo: { text: 'ST', color: '#ed7176', bgColor: '#191919' },
+		links: [
+			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
+			{
+				href: 'https://github.com/TGlide/show-and-tell',
+				text: 'source code',
+			},
+		],
+		image: {
+			src: 'projects/show-and-tell/image.png',
+			alt: 'Title "Demystifying animations" with colored shapes in the background',
+			position: 'top',
+		},
 	},
 ];

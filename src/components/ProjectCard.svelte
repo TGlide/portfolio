@@ -1,6 +1,4 @@
-<script lang="ts">
-	import { getWindowHeight, onBrowserMount } from '$utils/svelte';
-
+<script lang="ts" context="module">
 	type Link = {
 		href: string;
 		text: string;
@@ -25,12 +23,27 @@
 		bgColor: string;
 	};
 
-	export let image: PositionedImage | undefined = undefined;
-	export let logo: Image | TypedLogo | undefined = undefined;
-	export let title: string;
-	export let description: string;
-	export let links: Link[] | undefined = undefined;
-	export let animationDelay: string | undefined = undefined;
+	export type ProjectCardProps = {
+		image?: PositionedImage;
+		logo?: Image | TypedLogo;
+		title: string;
+		description: string;
+		links?: Link[];
+		animationDelay?: string;
+	};
+</script>
+
+<script lang="ts">
+	import { getWindowHeight, onBrowserMount } from '$utils/svelte';
+
+	type $$Props = ProjectCardProps;
+
+	export let image: $$Props['image'] = undefined;
+	export let logo: $$Props['logo'] = undefined;
+	export let title: $$Props['title'];
+	export let description: $$Props['description'];
+	export let links: $$Props['links'] = undefined;
+	export let animationDelay: $$Props['animationDelay'] = undefined;
 
 	$: imagePosition = image?.position ?? 'top';
 
