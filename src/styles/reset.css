@@ -158,3 +158,12 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+@media (prefers-reduced-motion) {
+
+  * {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

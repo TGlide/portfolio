@@ -2,7 +2,7 @@
 	"name": "portfolio",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "vite dev",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
@@ -56,7 +56,6 @@
 		"@fontsource/caveat": "^4.5.7",
 		"@fontsource/inter": "^4.5.12",
 		"@fontsource/montserrat": "^4.5.12",
-		"circletype": "^2.3.0",
 		"class-variance-authority": "^0.2.2"
 	}
 }

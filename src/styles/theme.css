@@ -20,6 +20,14 @@
   --radii-16: 1rem;
   --radii-full: 9999px;
 
+  /* Z-index */
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+  --z-index-5: 5;
+  --z-index-max: 9999;
+
   /* ------ */
   /* Colors */
   /* ------ */

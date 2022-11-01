@@ -1,4 +1,4 @@
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 import { onMount } from 'svelte';
 
 export const onBrowserMount = (cb: () => void) => {

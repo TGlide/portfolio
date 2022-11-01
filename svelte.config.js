@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,15 +13,15 @@ const config = {
 			$components: 'src/components',
 			$slices: 'src/slices',
 			$utils: 'src/utils',
-			$data: 'src/data'
-		}
+			$data: 'src/data',
+		},
 	},
 
 	preprocess: [
 		preprocess({
-			postcss: true
-		})
-	]
+			postcss: true,
+		}),
+	],
 };
 
 export default config;
