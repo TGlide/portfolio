@@ -1,4 +1,6 @@
-<script lang="ts" context="module">
+<script lang="ts">
+	import { getWindowHeight, onBrowserMount } from '$utils/svelte';
+
 	type Link = {
 		href: string;
 		text: string;
@@ -8,6 +10,10 @@
 		src: string;
 		alt: string;
 	};
+
+	function isImage(image: any): image is Image {
+		return typeof image === 'object' && 'src' in image && 'alt' in image;
+	}
 
 	type PositionedImage = Image & {
 		position?: 'top' | 'bottom';
@@ -19,35 +25,18 @@
 		bgColor: string;
 	};
 
-	export type ProjectCardProps = {
-		image?: PositionedImage;
-		logo?: Image | TypedLogo;
-		title: string;
-		description: string;
-		links?: Link[];
-		animationDelay?: string;
-	};
-</script>
-
-<script lang="ts">
-	import { getWindowHeight, onBrowserMount } from '$utils/svelte';
-
-	type $$Props = ProjectCardProps;
-
-	export let image: $$Props['image'] = undefined;
-	export let logo: $$Props['logo'] = undefined;
-	export let title: $$Props['title'];
-	export let description: $$Props['description'];
-	export let links: $$Props['links'] = undefined;
-	export let animationDelay: $$Props['animationDelay'] = undefined;
+	export let image: PositionedImage | undefined = undefined;
+	export let logo: Image | TypedLogo | undefined = undefined;
+	export let title: string;
+	export let description: string;
+	export let links: Link[] | undefined = undefined;
+	export let animationDelay: string | undefined = undefined;
 
 	$: imagePosition = image?.position ?? 'top';
 
 	let hasJs = false;
-	let mounted = false;
 	onBrowserMount(() => {
 		hasJs = true;
-		mounted = true;
 	});
 
 	let scrollY = 0;
@@ -56,17 +45,13 @@
 	let el: HTMLDivElement | null = null;
 	$: elY = (el?.getBoundingClientRect()?.top ?? 0) + scrollY;
 
-	const triggerOffset = 200;
+	const triggerOffset = 250;
 
 	let animationTriggered = false;
 	$: {
-		if (elY < scrollBottom - triggerOffset && mounted) {
+		if (elY < scrollBottom - triggerOffset && hasJs) {
 			animationTriggered = true;
 		}
-	}
-
-	function isImage(image: any): image is Image {
-		return typeof image === 'object' && 'src' in image && 'alt' in image;
 	}
 </script>
 

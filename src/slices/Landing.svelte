@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Eyes from '$components/Eyes';
-	import DecorativeText from '$UI/DecorativeText.svelte';
+	import DecorativeText from '$components/DecorativeText.svelte';
 </script>
 
 <section id="hero">

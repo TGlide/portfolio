@@ -2,20 +2,23 @@
 	import ProjectCard from '$components/ProjectCard.svelte';
 	import { projects } from '$data/projects';
 	import { divideArray } from '$utils/array';
+
+	let numShown = 8;
+	$: slicedProjects = projects.slice(0, numShown);
 </script>
 
 <section id="projects">
 	<div class="container">
 		<div class="grid grid-sm">
 			<div class="column">
-				{#each projects as project}
+				{#each slicedProjects as project}
 					<ProjectCard {...project} />
 				{/each}
 			</div>
 		</div>
 
 		<div class="grid grid-md">
-			{#each divideArray(projects, 2) as projectGroup, i}
+			{#each divideArray(slicedProjects, 2) as projectGroup, i}
 				<div class="column">
 					{#each projectGroup as project}
 						<ProjectCard {...project} animationDelay="{i * 100}ms" />
@@ -25,7 +28,7 @@
 		</div>
 
 		<div class="grid grid-lg">
-			{#each divideArray(projects, 3) as projectGroup, i}
+			{#each divideArray(slicedProjects, 3) as projectGroup, i}
 				<div class="column">
 					{#each projectGroup as project}
 						<ProjectCard {...project} animationDelay="{i * 100}ms" />
