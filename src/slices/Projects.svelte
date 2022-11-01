@@ -52,12 +52,12 @@
 
 	.grid {
 		display: grid;
-		gap: 1rem;
+		gap: 16px;
 
 		.column {
-			:global(> * + *) {
-				margin-top: 1rem;
-			}
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
 		}
 	}
 
