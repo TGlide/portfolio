@@ -102,9 +102,9 @@ export const projects: ProjectCardProps[] = [
 		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
 		logo: { text: 'PF', color: '#fcdc92', bgColor: 'hsl(238, 100%, 5%)' },
 		links: [
-			{ href: 'https://show-and-tell-gamma.vercel.app/', text: 'check it out' },
+			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
 			{
-				href: 'https://github.com/TGlide/show-and-tell',
+				href: 'https://github.com/TGlide/pathfinder',
 				text: 'source code',
 			},
 		],
