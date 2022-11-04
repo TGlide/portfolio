@@ -1,9 +1,10 @@
 <script>
+	import { browser } from '$app/environment';
 	import ProjectCard from '$components/ProjectCard.svelte';
 	import { projects } from '$data/projects';
 	import { divideArray } from '$utils/array';
 
-	let numShown = 9;
+	let numShown = browser ? 9 : 999;
 	$: slicedProjects = projects.slice(0, numShown);
 </script>
 
