@@ -59,11 +59,22 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Screen Recorder',
-		description: 'Screen Recorder built with Vue and Electron',
-		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
+		title: 'Github CSS Card',
+		description: 'A 3D card effect for your Github profile.',
+		logo: {
+			text: 'GC',
+			color: '#f02e65',
+			bgColor: '#00011a',
+		},
 		links: [
-			{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' },
+			{
+				href: 'https://github-css-card.vercel.app/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/TGlide/github-css-card',
+				text: 'source code',
+			},
 		],
 	},
 	{
@@ -77,11 +88,16 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: "Warrior's Tenacity",
-		description:
-			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
-		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
-		logo: { text: 'W', color: '#E36018', bgColor: '#170005' },
+		title: 'Pathfinder',
+		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
+		logo: { text: 'PF', color: '#fcdc92', bgColor: 'hsl(238, 100%, 5%)' },
+		links: [
+			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
+			{
+				href: 'https://github.com/TGlide/pathfinder',
+				text: 'source code',
+			},
+		],
 	},
 	{
 		title: 'Chuck Norris Facts',
@@ -98,16 +114,11 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Pathfinder',
-		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
-		logo: { text: 'PF', color: '#fcdc92', bgColor: 'hsl(238, 100%, 5%)' },
-		links: [
-			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
-			{
-				href: 'https://github.com/TGlide/pathfinder',
-				text: 'source code',
-			},
-		],
+		title: "Warrior's Tenacity",
+		description:
+			'An arcade game where you defeat enemeis with the power of typing! Built for an old college assignment.',
+		links: [{ href: 'https://github.com/TGlide/Warrior-s-Tenacity', text: 'source code' }],
+		logo: { text: 'W', color: '#E36018', bgColor: '#170005' },
 	},
 	{
 		title: 'Show and tell',
@@ -126,5 +137,13 @@ export const projects: ProjectCardProps[] = [
 			alt: 'Title "Demystifying animations" with colored shapes in the background',
 			position: 'top',
 		},
+	},
+	{
+		title: 'Screen Recorder',
+		description: 'Screen Recorder built with Vue and Electron',
+		logo: { text: 'SR', color: '#42b883', bgColor: '#1A1A1A' },
+		links: [
+			{ href: 'https://github.com/TGlide/vue-electron-screen-recorder', text: 'source code' },
+		],
 	},
 ];
