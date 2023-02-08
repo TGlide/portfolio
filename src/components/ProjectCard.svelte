@@ -100,7 +100,7 @@
 			<div class="links">
 				{#each links as link, idx}
 					{@const isLast = idx + 1 === (links || []).length}
-					<a href={link.href} target="_blank">{link.text}</a>
+					<a href={link.href} target="_blank" rel="noreferrer">{link.text}</a>
 					{#if !isLast}
 						<span class="separator">·</span>
 					{/if}
@@ -215,10 +215,12 @@
 			font-size: 0.875rem;
 			font-weight: 500;
 			transition: opacity 200ms ease;
-		}
 
-		> a:hover {
-			opacity: 1;
+			border-bottom: 1px solid var(--ghost-white);
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 </style>
