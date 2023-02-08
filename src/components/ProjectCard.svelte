@@ -221,6 +221,12 @@
 			&:hover {
 				opacity: 1;
 			}
+
+			&:first-child::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+			}
 		}
 	}
 </style>

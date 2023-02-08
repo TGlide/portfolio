@@ -43,7 +43,7 @@
   --sea-blue-hsl: 213, 100%, 66%;
   --sea-blue: hsl(var(--sea-blue-hsl));
 
-  --eerie-gray-hsl: 238, 10%, 15%;
+  --eerie-gray-hsl: 240, 20%, 11%;
   --eerie-gray: hsl(var(--eerie-gray-hsl));
 
   --night-black-hsl: 238, 100%, 5%;

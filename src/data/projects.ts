@@ -38,6 +38,31 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
+		title: 'Radial Menu',
+		description: "Radial Menu Experiment based on Rauno's Freiberg work",
+		logo: {
+			text: 'R',
+			color: '#ffffff',
+			bgColor: '#121210',
+		},
+		image: {
+			src: 'projects/radial-menu/image.png',
+			alt: 'Radial Menu, with the option "Eat!" selected',
+			position: 'top',
+		},
+		links: [
+			{
+				href: 'https://svelte-radial-menu.thomasglopes.com/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github/tglide/svelte-radial-menu',
+				text: 'source code',
+			},
+		],
+	},
+
+	{
 		title: 'Vintage Cars',
 		description:
 			'A virtual gallery of vintage cars. Done for a job interview, previously coupled together with a GraphQL server, and later changed to be purely static.',
@@ -59,20 +84,13 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Github CSS Card',
-		description: 'A 3D card effect for your Github profile.',
-		logo: {
-			text: 'GC',
-			color: '#f02e65',
-			bgColor: '#00011a',
-		},
+		title: 'Pathfinder',
+		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
+		logo: { text: 'PF', color: '#e9d8a6', bgColor: '#001219' },
 		links: [
+			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
 			{
-				href: 'https://github-css-card.vercel.app/',
-				text: 'check it out',
-			},
-			{
-				href: 'https://github.com/TGlide/github-css-card',
+				href: 'https://github.com/TGlide/pathfinder',
 				text: 'source code',
 			},
 		],
@@ -88,17 +106,25 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Pathfinder',
-		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
-		logo: { text: 'PF', color: '#fcdc92', bgColor: 'hsl(238, 100%, 5%)' },
+		title: 'Github CSS Card',
+		description: 'A 3D card effect for your Github profile.',
+		logo: {
+			text: 'GC',
+			color: 'var(--fiery-rose)',
+			bgColor: '#00011a',
+		},
 		links: [
-			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
 			{
-				href: 'https://github.com/TGlide/pathfinder',
+				href: 'https://github-css-card.vercel.app/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/TGlide/github-css-card',
 				text: 'source code',
 			},
 		],
 	},
+
 	{
 		title: 'Chuck Norris Facts',
 		description: 'A Next.js Web App to search for facts on the most badass man alive.',
