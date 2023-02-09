@@ -56,7 +56,7 @@ export const projects: ProjectCardProps[] = [
 				text: 'check it out',
 			},
 			{
-				href: 'https://github/tglide/svelte-radial-menu',
+				href: 'https://github.com/tglide/svelte-radial-menu',
 				text: 'source code',
 			},
 		],
