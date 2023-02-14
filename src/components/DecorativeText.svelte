@@ -36,6 +36,16 @@
 		}
 	}
 
+	/* Animate a border from left to right using background linear-gradient  */
+	@keyframes fill-border {
+		0% {
+			background-size: 0% 3px;
+		}
+		100% {
+			background-size: 100% 3px;
+		}
+	}
+
 	.decorative-text {
 		position: relative;
 
@@ -67,16 +77,23 @@
 			}
 		}
 
+		.text-left,
+		.text-right {
+			animation: pop-in 500ms 1500ms ease-in-out both;
+
+			@media (--bp-lg) {
+				animation-delay: 1000ms;
+			}
+		}
+
 		.text-left {
 			position: absolute;
 			top: -1rem;
 			left: -2rem;
 
 			--base-transform: translateY(-100%) rotate(-15deg);
-			animation: pop-in 500ms 2000ms ease-in-out both;
 
 			@media (--bp-lg) {
-				animation-delay: 2500ms;
 				top: -0.5rem;
 				left: -0.5rem;
 			}
@@ -99,28 +116,25 @@
 			right: -1.5rem;
 
 			--base-transform: translateY(-100%) rotate(15deg);
-			animation: pop-in 500ms 2000ms ease-in-out both;
 
 			@media (--bp-lg) {
-				animation-delay: 2500ms;
 				top: -0.6rem;
 				right: -1rem;
 			}
 		}
 
 		.name {
-			border-bottom: 3px hsla(var(--megaman-blue-hsl), 1) solid;
-			transition: border 200ms ease;
-			user-select: none;
-			&:hover {
-				border-color: hsla(var(--megaman-blue-hsl), 0.75);
-				cursor: pointer;
-			}
+			background: linear-gradient(
+				to right,
+				hsla(var(--megaman-blue-hsl), 1) 0%,
+				hsla(var(--megaman-blue-hsl), 1) 0%
+			);
+			background-size: 0% 3px;
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			animation: fill-border 500ms 500ms ease forwards;
 
-			&:active {
-				/* TODO: Remove when about me section is added */
-				border-color: hsla(var(--fiery-rose-hsl), 0.75);
-			}
+			user-select: none;
 		}
 	}
 
@@ -133,10 +147,10 @@
 	path {
 		stroke-dasharray: 50;
 		stroke-dashoffset: 50;
-		animation: dash 500ms 1500ms ease-out forwards;
+		animation: dash 500ms 1000ms ease-out forwards;
 
 		@media (--bp-lg) {
-			animation-delay: 2000ms;
+			animation-delay: 750ms;
 		}
 	}
 </style>

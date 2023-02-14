@@ -8,3 +8,12 @@ body {
   font-family: var(--ff-body);
   min-height: 100vh;
 }
+
+/* If prefers-reduced-motion, animation-delay should be 0 everywhere */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0 !important;
+    animation-duration: 0 !important;
+    transition-duration: 0 !important;
+  }
+}

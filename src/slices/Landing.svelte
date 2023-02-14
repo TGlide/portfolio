@@ -149,16 +149,16 @@
 		background: var(--fiery-rose);
 		opacity: 0.25;
 		border-radius: 50%;
-		animation: scale 1000ms 500ms ease both;
+		animation: scale 1000ms 0ms ease both;
 		z-index: var(--z-index-1);
 
 		@media (--bp-md) {
-			animation-delay: 3500ms;
+			animation-delay: 2000ms;
 			animation-duration: 1000ms;
 		}
 
 		@media (--bp-lg) {
-			animation-delay: 3500ms;
+			animation-delay: 1250ms;
 			animation-duration: 1000ms;
 			top: -320px;
 			right: -250px;
@@ -185,7 +185,7 @@
 			width: var(--size);
 			height: var(--size);
 
-			animation: fade-top-to-bottom 750ms 500ms ease both;
+			animation: fade-in 250ms 100ms ease both;
 
 			@media (--bp-lg) {
 				--size: 320px;
@@ -213,7 +213,7 @@
 				font-weight: 700;
 				line-height: 6rem;
 
-				animation: fade-top-to-bottom 625ms 1200ms ease both;
+				animation: fade-in 250ms 100ms ease both;
 
 				@media (--bp-lg) {
 					font-size: 6rem;
@@ -227,7 +227,7 @@
 				font-weight: 600;
 				margin-top: -1rem;
 
-				animation: fade-top-to-bottom 500ms 1500ms ease both;
+				animation: fade-in 250ms 100ms ease both;
 
 				@media (--bp-lg) {
 					font-size: 3rem;
@@ -249,14 +249,14 @@
 
 		padding-bottom: 1rem;
 
-		animation: fade-in 1000ms ease 1750ms both;
+		animation: fade-in 1000ms ease 1000ms both;
 
 		@media (--bp-md) {
-			animation-delay: 2500ms;
+			animation-delay: 2000ms;
 		}
 
 		@media (--bp-lg) {
-			animation-delay: 3000ms;
+			animation-delay: 1500ms;
 		}
 
 		#circle-type {
