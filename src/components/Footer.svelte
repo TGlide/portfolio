@@ -1,13 +1,16 @@
 <footer>
 	<div class="flex flex-col items-center">
 		<div class="icons">
-			<a href="https://github.com/TGlide/" target="_blank">
+			<a href="https://github.com/TGlide/" target="_blank" rel="noreferrer">
 				<img src="github.svg" alt="Github logo" />
+			</a>
+			<a href="https://twitter.com/thomasglopes" target="_blank" rel="noreferrer">
+				<img src="twitter.svg" alt="Twitter logo" />
 			</a>
 			<a href="mailto:thomasgl@pm.me" target="_blank">
 				<img src="mail.svg" alt="Mail envelope" />
 			</a>
-			<a href="https://www.linkedin.com/in/thomas-gl/" target="_blank">
+			<a href="https://www.linkedin.com/in/thomas-gl/" target="_blank" rel="noreferrer">
 				<img src="linkedin.svg" alt="Linkedin logo" />
 			</a>
 		</div>
@@ -38,7 +41,7 @@
 	.icons {
 		display: flex;
 		justify-content: center;
-		gap: 4rem;
+		gap: 2rem;
 		padding: 0 3rem 1rem;
 		border-bottom: 1px solid hsla(var(--ghost-white-hsl), 0.25);
 

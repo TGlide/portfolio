@@ -2,19 +2,15 @@ import type { ProjectCardProps } from '$components/ProjectCard.svelte';
 
 export const projects: ProjectCardProps[] = [
 	{
-		title: 'Wordex',
-		description: 'Wordle clone with support for multiple languages',
+		title: 'Radix Svelte',
+		description: 'A port of the popular React library Radix UI to Svelte',
 		logo: {
-			src: 'projects/wordex/logo.svg',
-			alt: 'Wordex logo',
-		},
-		image: {
-			src: 'projects/wordex/image.png',
-			alt: 'Wordex image',
+			src: 'projects/radix-svelte/logo.svg',
+			alt: 'Radix Svelte logo',
 		},
 		links: [
 			{
-				href: 'https://wordex.app/',
+				href: 'https://radix-svelte.com/',
 				text: 'check it out',
 			},
 			{
@@ -24,17 +20,22 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
-		title: 'Movie Search',
-		description: 'A Next.js Web App to check if your letterboxd list movies are on netflix',
-		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
-		image: {
-			src: 'projects/movie-search/image.png',
-			alt: "A table with 3 headers (Netflix, with a number alongside a green check indicating the movies on netflix, and a number alongside a red x indicating the movies that aren't), title, and rating (based on IMDB).",
-			position: 'bottom',
+		title: 'Codeverter',
+		description: 'A tool to convert code snippets between different technologies',
+		logo: {
+			text: 'CV',
+			color: 'hsl(17, 95%, 65%)',
+			bgColor: '#121210',
 		},
 		links: [
-			{ href: 'https://movie-search-iota.vercel.app/', text: 'check it out' },
-			{ href: 'https://github.com/TGlide/movie-search', text: 'source code' },
+			{
+				href: 'https://codeverter.vercel.app/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/tglide/codeverter',
+				text: 'source code',
+			},
 		],
 	},
 	{
@@ -59,6 +60,20 @@ export const projects: ProjectCardProps[] = [
 				href: 'https://github.com/tglide/svelte-radial-menu',
 				text: 'source code',
 			},
+		],
+	},
+	{
+		title: 'Movie Search',
+		description: 'A Next.js Web App to check if your letterboxd list movies are on netflix',
+		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
+		image: {
+			src: 'projects/movie-search/image.png',
+			alt: "A table with 3 headers (Netflix, with a number alongside a green check indicating the movies on netflix, and a number alongside a red x indicating the movies that aren't), title, and rating (based on IMDB).",
+			position: 'bottom',
+		},
+		links: [
+			{ href: 'https://movie-search-iota.vercel.app/', text: 'check it out' },
+			{ href: 'https://github.com/TGlide/movie-search', text: 'source code' },
 		],
 	},
 
@@ -99,7 +114,6 @@ export const projects: ProjectCardProps[] = [
 		title: 'Weather PWA',
 		description: 'A weather PWA built with React, Typescript and SCSS',
 		logo: { src: 'projects/weather/logo.svg', alt: 'Weather app logo' },
-		image: { src: 'projects/weather/image.png', alt: 'Weather app image', position: 'bottom' },
 		links: [
 			{ href: 'https://tgl-weather-app.vercel.app/', text: 'check it out' },
 			{ href: 'https://github.com/TGlide/weather-app', text: 'source code' },
@@ -129,11 +143,6 @@ export const projects: ProjectCardProps[] = [
 		title: 'Chuck Norris Facts',
 		description: 'A Next.js Web App to search for facts on the most badass man alive.',
 		logo: { src: 'projects/chuck/logo.svg', alt: 'Chuck Norris face' },
-		image: {
-			src: 'projects/chuck/image.png',
-			alt: 'A website containing a title written Chuck Norris Facts, a search bar, and a search button.',
-			position: 'bottom',
-		},
 		links: [
 			{ href: 'https://chuck-norris-facts-nextjs.vercel.app/', text: 'check it out' },
 			{ href: 'https://github.com/TGlide/chuck-norris-facts-nextjs', text: 'source code' },
@@ -158,11 +167,6 @@ export const projects: ProjectCardProps[] = [
 				text: 'source code',
 			},
 		],
-		image: {
-			src: 'projects/show-and-tell/image.png',
-			alt: 'Title "Demystifying animations" with colored shapes in the background',
-			position: 'top',
-		},
 	},
 	{
 		title: 'Screen Recorder',
