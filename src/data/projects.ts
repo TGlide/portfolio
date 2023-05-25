@@ -14,7 +14,7 @@ export const projects: ProjectCardProps[] = [
 				text: 'check it out',
 			},
 			{
-				href: 'https://github.com/tGlide/wordex',
+				href: 'https://github.com/tGlide/radix-svelte',
 				text: 'source code',
 			},
 		],
