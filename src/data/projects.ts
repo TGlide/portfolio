@@ -2,6 +2,24 @@ import type { ProjectCardProps } from '$components/ProjectCard.svelte';
 
 export const projects: ProjectCardProps[] = [
 	{
+		title: 'Melt UI',
+		description: 'A set of headless, accessible component builders for Svelte',
+		logo: {
+			src: 'projects/melt-ui/logo.png',
+			alt: 'Melt UI logo',
+		},
+		links: [
+			{
+				href: 'https://melt-ui.com/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/melt-ui/melt-ui',
+				text: 'source code',
+			},
+		],
+	},
+	{
 		title: 'Radix Svelte',
 		description: 'A port of the popular React library Radix UI to Svelte',
 		logo: {
@@ -14,7 +32,7 @@ export const projects: ProjectCardProps[] = [
 				text: 'check it out',
 			},
 			{
-				href: 'https://github.com/tGlide/radix-svelte',
+				href: 'https://github.com/radix-svelte/radix-svelte',
 				text: 'source code',
 			},
 		],
