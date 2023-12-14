@@ -14,17 +14,17 @@
 				<img src="linkedin.svg" alt="Linkedin logo" />
 			</a>
 		</div>
-		<p>Made with <span>{'<3'}</span></p>
+		<p>made with <span>{'<3'}</span></p>
 	</div>
 
-	<img class="bg" src="footer_bg.svg" alt="Blue waves" />
+	<!-- <img class="bg" src="footer_bg.svg" alt="Blue waves" /> -->
 </footer>
 
 <style lang="postcss">
 	footer {
 		overflow: hidden;
 		position: relative;
-		padding-bottom: max(200px, 15vw);
+		padding-bottom: 5rem;
 		margin-top: 5rem;
 	}
 
@@ -55,7 +55,8 @@
 	}
 
 	p {
-		font-weight: 300;
+		font-family: var(--ff-display);
+		font-weight: 500;
 		font-size: 1.5rem;
 		margin-top: 1.125rem;
 

@@ -61,7 +61,7 @@
 			}
 
 			@media (--bp-lg) {
-				font-size: 1.5rem;
+				font-size: 1.75rem;
 			}
 		}
 
@@ -95,7 +95,7 @@
 
 			@media (--bp-lg) {
 				top: -0.5rem;
-				left: -0.5rem;
+				left: -0.75rem;
 			}
 		}
 
@@ -119,7 +119,7 @@
 
 			@media (--bp-lg) {
 				top: -0.6rem;
-				right: -1rem;
+				right: -1.25rem;
 			}
 		}
 

@@ -91,7 +91,7 @@
 					</span>
 				</div>
 			{/if}
-			<p>{title}</p>
+			<h3>{title}</h3>
 		</div>
 		<p class="description">
 			{description}
@@ -126,12 +126,15 @@
 		display: flex;
 		flex-direction: column;
 		background-color: var(--eerie-gray);
+		border: 1px dashed var(--eerie-gray);
 		border-radius: var(--radii-12);
 
 		padding: 1rem;
 
 		opacity: 0;
 		transform: translateY(16px);
+
+		position: relative;
 
 		&.animate {
 			animation: fade-bottom-to-top 0.5s ease var(--animation-delay, 0ms) both;
@@ -179,14 +182,15 @@
 				display: grid;
 				place-items: center;
 				font-size: 1.5rem;
-				font-weight: 600;
+				font-family: var(--ff-decorative);
+				font-weight: 900;
 			}
 		}
 
-		> p {
+		> h3 {
 			font-family: var(--ff-display);
 			font-size: 1.5rem;
-			font-weight: 500;
+			font-weight: 600;
 		}
 	}
 
@@ -211,7 +215,7 @@
 		}
 
 		> a {
-			font-family: var(--ff-display);
+			font-family: var(--ff-body);
 			font-size: 0.875rem;
 			font-weight: 500;
 			transition: opacity 200ms ease;
