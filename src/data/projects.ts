@@ -81,6 +81,25 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 	{
+		title: 'Novel Svelte',
+		description: 'A port of the popular React library Novel to Svelte',
+		logo: {
+			text: 'N',
+			color: '#ffffff',
+			bgColor: '#121210',
+		},
+		links: [
+			{
+				href: 'https://novel-svelte-thomasglopes.vercel.app/',
+				text: 'check it out',
+			},
+			{
+				href: 'https://github.com/tglide/novel-svelte',
+				text: 'source code',
+			},
+		]
+	},
+	{
 		title: 'Movie Search',
 		description: 'A Next.js Web App to check if your letterboxd list movies are on netflix',
 		logo: { text: 'M', color: 'var(--fiery-rose)', bgColor: 'var(--night-black)' },
@@ -95,6 +114,19 @@ export const projects: ProjectCardProps[] = [
 		],
 	},
 
+
+	{
+		title: 'Pathfinder',
+		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
+		logo: { text: 'PF', color: '#e9d8a6', bgColor: '#001219' },
+		links: [
+			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
+			{
+				href: 'https://github.com/TGlide/pathfinder',
+				text: 'source code',
+			},
+		],
+	},
 	{
 		title: 'Vintage Cars',
 		description:
@@ -112,18 +144,6 @@ export const projects: ProjectCardProps[] = [
 			},
 			{
 				href: 'https://github.com/TGlide/car-gallery-webapp',
-				text: 'source code',
-			},
-		],
-	},
-	{
-		title: 'Pathfinder',
-		description: 'A demo of an HTML element following an SVG path. Made with Svelte.',
-		logo: { text: 'PF', color: '#e9d8a6', bgColor: '#001219' },
-		links: [
-			{ href: 'https://pathfinder-jade.vercel.app/', text: 'check it out' },
-			{
-				href: 'https://github.com/TGlide/pathfinder',
 				text: 'source code',
 			},
 		],
