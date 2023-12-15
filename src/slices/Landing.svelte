@@ -124,7 +124,7 @@
 	}
 
 	#hero {
-		height: 100vh;
+		height: 100svh;
 		min-height: 650px;
 		max-height: 1440px;
 		position: relative;
