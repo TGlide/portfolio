@@ -44,6 +44,9 @@
 		"@fontsource/inter": "^4.5.12",
 		"@fontsource/montserrat": "^4.5.12",
 		"@vercel/analytics": "^0.1.11",
-		"class-variance-authority": "^0.2.2"
+		"ai": "^2.2.32",
+		"class-variance-authority": "^0.2.2",
+		"eventsource-parser": "^1.1.1",
+		"openai": "^4.26.0"
 	}
 }
