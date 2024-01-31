@@ -9,9 +9,6 @@ const openai = new OpenAI({
 });
 
 export const POST = async ({ request }) => {
-
-
-
   // Extract the `prompt` from the body of the request
   const { messages } = await request.json();
 
@@ -32,7 +29,7 @@ export const POST = async ({ request }) => {
   // CORS
   res.headers.set('Access-Control-Allow-Origin', '*');
   res.headers.set('Access-Control-Allow-Headers', '*');
-  res.headers.set('Access-Control-Allow-Methods', 'POST');
+  res.headers.set('Access-Control-Allow-Methods', 'POST,OPTIONS');
   res.headers.set('Access-Control-Allow-Credentials', 'true');
   return res
 };
