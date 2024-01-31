@@ -28,5 +28,11 @@ export const POST = async ({ request }) => {
   // Convert the response into a friendly text-stream
   const stream = OpenAIStream(response);
   // Respond with the stream
-  return new StreamingTextResponse(stream);
+  const res = new StreamingTextResponse(stream);
+  // CORS
+  res.headers.set('Access-Control-Allow-Origin', '*');
+  res.headers.set('Access-Control-Allow-Headers', '*');
+  res.headers.set('Access-Control-Allow-Methods', 'POST');
+  res.headers.set('Access-Control-Allow-Credentials', 'true');
+  return res
 };
