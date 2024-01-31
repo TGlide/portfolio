@@ -8,6 +8,19 @@ const openai = new OpenAI({
   apiKey: OPENAI_API_KEY || '',
 });
 
+// cors options for the route
+export const OPTIONS = () => {
+  const res = new Response(null, {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Methods': '*',
+      'Access-Control-Allow-Credentials': 'true',
+    },
+  });
+  return res;
+}
+
 export const POST = async ({ request }) => {
   // Extract the `prompt` from the body of the request
   const { messages } = await request.json();
