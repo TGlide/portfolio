@@ -1,8 +1,10 @@
 <script lang="ts">
 	import Footer from '$components/Footer.svelte';
-	import '$styles';
+	import '$styles/index.css';
 
-	import { dev } from '$app/environment';
+	import '@fontsource/caveat/700.css';
+	import '@fontsource-variable/urbanist';
+	import '@fontsource-variable/inter';
 </script>
 
 <main>
